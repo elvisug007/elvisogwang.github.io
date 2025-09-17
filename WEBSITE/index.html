@@ -1,308 +1,53 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+ <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elvis Ogwang - Personal Website</title>
 
- <!-- Google Search Console Verification -->
-  <meta name="google-site-verification" content="ht_LuhFKm1up7M1_o7aCg-qVUbVPCtbmk2yw6D_C05M" />
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- ✅ SEO Meta Tags -->
+  <meta name="description" content="Personal website of Elvis Ogwang — Designer, Innovator, and Learner from Uganda. Explore my projects, skills, and contact details.">
+  <meta name="keywords" content="Elvis Ogwang, web designer, portfolio, Uganda, projects, skills, personal website">
+  <meta name="author" content="Elvis Ogwang">
 
+  <!-- ✅ Open Graph for Social Sharing -->
+  <meta property="og:title" content="Elvis Ogwang - Personal Website">
+  <meta property="og:description" content="Designer | Innovator | Learner. Explore my portfolio, projects, and skills.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://elvisogwang.github.io/">
+  <meta property="og:image" content="https://elvisogwang.github.io/your-photo.jpg">
+
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Elvis Ogwang - Personal Website">
+  <meta name="twitter:description" content="Personal site of Elvis Ogwang: Designer, Innovator, Learner.">
+  <meta name="twitter:image" content="https://elvisogwang.github.io/your-photo.jpg">
+
+  <!-- ✅ Google Search Console Verification -->
+  <meta name="google-site-verification" content="ht_LuhFKm1up7M1_o7aCg-qVUbVPCtbmk2yw6D_C05M" />
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <style>
-    /* Reset & Base */
-    * {
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Poppins", sans-serif;
-      color: #fff;
-      line-height: 1.7;
-      overflow-x: hidden;
-
-      /* Rainbow Gradient Background */
       background: linear-gradient(270deg, #ff0080, #ff8c00, #40e0d0, #8a2be2, #ff0080);
       background-size: 1000% 1000%;
       animation: rainbow 25s ease infinite;
+      color: #fff;
     }
-
     @keyframes rainbow {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      0% {background-position:0% 50%;}
+      50% {background-position:100% 50%;}
+      100% {background-position:0% 50%;}
     }
-
-    h1, h2, h3 {
-      font-weight: 700;
-    }
-
-    a {
-      transition: all 0.3s ease;
-    }
-
-    /* Header */
-    header {
-      background: rgba(30, 30, 47, 0.8);
-      color: #fff;
-      text-align: center;
-      padding: 4rem 2rem;
-      border-bottom: 3px solid #ff9800;
-      backdrop-filter: blur(6px);
-    }
-
-    header h1 {
-      font-size: 3rem;
-    }
-
-    header p {
-      font-size: 1.3rem;
-      color: #ddd;
-    }
-
-    /* Navigation */
-    nav {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 1rem;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(4px);
-    }
-
-    nav a {
-      color: #fff;
-      margin: 0 18px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      position: relative;
-    }
-
-    nav a::after {
-      content: "";
-      display: block;
-      width: 0;
-      height: 2px;
-      background: #ffeb3b;
-      transition: width 0.3s;
-      margin: auto;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    /* Sections */
-    section {
-      padding: 4rem 2rem;
-      max-width: 1100px;
-      margin: auto;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s ease-out;
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 15px;
-      margin-bottom: 2rem;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-    }
-
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    section h2 {
-      font-size: 2.3rem;
-      margin-bottom: 1.5rem;
-      color: #ffeb3b;
-      text-align: center;
-      position: relative;
-    }
-
-    section h2::after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 3px;
-      background: #ffeb3b;
-      margin: 10px auto;
-      border-radius: 2px;
-    }
-
-    /* About */
-    .about {
-      text-align: center;
-    }
-
-    .about img {
-      width: 160px;
-      border-radius: 50%;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-    }
-
-    /* Projects */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
-
-    .project-card {
-      background: rgba(255,255,255,0.1);
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .project-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    }
-
-    .project-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      cursor: pointer;
-    }
-
-    .card-content {
-      padding: 20px;
-      color: #fff;
-    }
-
-    .card-content h3 {
-      margin-bottom: 10px;
-      color: #ffeb3b;
-    }
-
-    .card-content a {
-      text-decoration: none;
-      color: #ffeb3b;
-      font-weight: bold;
-    }
-
-    /* Skills */
-    .skills ul {
-      list-style: none;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: 15px;
-      margin-top: 2rem;
-    }
-
-    .skills li {
-      background: #ff9800;
-      color: #fff;
-      padding: 12px;
-      text-align: center;
-      border-radius: 10px;
-      font-weight: 600;
-      transition: transform 0.3s;
-    }
-
-    .skills li:hover {
-      transform: scale(1.05);
-    }
-
-    /* Contact */
-    .contact {
-      text-align: center;
-    }
-
-    .contact a {
-      display: inline-block;
-      margin: 12px;
-      text-decoration: none;
-      color: #fff;
-      background: #2c2c54;
-      padding: 12px 22px;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: all 0.3s;
-    }
-
-    .contact a:hover {
-      background: #ff9800;
-      transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-
-    /* Footer */
-    footer {
-      background: rgba(0,0,0,0.8);
-      color: #ddd;
-      text-align: center;
-      padding: 1.5rem;
-      margin-top: 3rem;
-      border-top: 2px solid #ff9800;
-    }
-
-    /* Lightbox */
-    #lightbox {
-      display: none;
-      position: fixed;
-      z-index: 10000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(30,30,47,0.95);
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-    }
-
-    #lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 12px;
-      box-shadow: 0 4px 25px rgba(0,0,0,0.5);
-    }
-
-    /* Back-to-top button */
-    #backToTop {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: #ffeb3b;
-      color: #000;
-      border: none;
-      padding: 12px 18px;
-      border-radius: 50%;
-      font-size: 18px;
-      cursor: pointer;
-      display: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      transition: all 0.3s;
-    }
-
-    #backToTop:hover {
-      background: #ffc107;
-      transform: scale(1.1);
-    }
-
-    /* Mobile */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-      nav a {
-        margin: 0 10px;
-        font-size: 0.9rem;
-      }
-      section {
-        padding: 3rem 1.5rem;
-      }
-    }
+    header {padding: 2rem; background: rgba(0,0,0,0.5);}
+    nav a {margin: 0 15px; color:#fff; text-decoration:none; font-weight:bold;}
+    section {padding: 3rem; background: rgba(0,0,0,0.6); margin:1rem auto; max-width:900px; border-radius:10px;}
+    footer {padding:1rem; background: rgba(0,0,0,0.7);}
   </style>
 </head>
 <body>
@@ -433,4 +178,5 @@
   </script>
 </body>
 </html>
+
 
